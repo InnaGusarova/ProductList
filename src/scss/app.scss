@@ -1,0 +1,230 @@
+$mainBack: #FFFEFB;
+$mainText: #3F3F3F;
+$inputName: #49485E;
+$titleDescription: #B4B4B4;
+$btnOff: #EEEEEE;
+$markColor: #FF8484;
+$mainFamily: 'Source Sans Pro', sans-serif;
+$smallShadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+$smallShadowHover: 0px 2px 5px rgba(0, 0, 0, 0.4);
+$afterShadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+$bigShadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+$bigShadowHover: 0px 20px 30px rgba(0, 0, 0, 0.1), 0px 6px 10px rgba(0, 0, 0, 0.1);
+$deletePng: url("./delete.png");
+
+
+@mixin transition($propery) {
+    transition: $propery 1s ease;
+}
+
+body {
+    background-color: $mainBack;
+    font-family: $mainFamily;
+    font-weight: 400;
+    color: $mainText;
+}
+main {
+    box-sizing: border-box;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 31px 32px;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+}
+.addProduct {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.leftBar {
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 24px;
+    width: 332px;
+    border-radius: 4px;
+    box-shadow: $bigShadow;
+}
+.description {
+    margin: 16px 0 0 0;
+    font-size: 10px;
+    color: $inputName;
+}
+.mark::after {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 7.5px;
+    vertical-align: top;
+    background-color: $markColor;
+}
+.value, .valueTA {
+    margin: 4px 0 0 0;
+    max-width: 284px;
+    width: 100%;
+    height: 36px;
+    background-color: $mainBack;
+    box-shadow: $smallShadow;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 16px;
+}
+.valueTA {
+    height: unset;
+    resize: none;
+}
+::placeholder {
+    color: $titleDescription;
+    font-size: 12px;
+}
+.value:focus-visible, .valueTA:focus-visible {
+    outline: none;
+    box-shadow: $smallShadowHover;
+    @include transition(box-shadow);
+}
+.btnAddOff {
+    display: block;
+    margin-top: 24px;
+    width: 284px;
+    height: 36px;
+    background-color: $btnOff;
+    border: none;
+    border-radius: 10px;
+    color: $titleDescription;
+    font-size: 12px;
+    font-weight: 600;
+}
+.sort {
+    margin-right: 10px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 121.49px;
+    height: 36px;
+    background-color: $mainBack;
+    border: none;
+    border-radius: 4px;
+    box-shadow: $smallShadow;
+    font-size: 12px;
+    color: $titleDescription;
+    cursor: pointer;
+} 
+.sort:hover {
+    box-shadow: $smallShadowHover;
+    @include transition(box-shadow);
+}
+.arrow {
+    width: 6px;
+    height: 6px;
+}
+.products {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    max-width: 1038px;
+}
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1028px;
+    justify-content: space-around;
+}
+.product {
+    margin-right: 10px;
+    max-width: 332px;
+    background-color: $mainBack;
+    box-shadow: $bigShadow;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    position: relative;
+}
+.product:hover::after {
+    box-sizing: border-box;
+    content: $deletePng;
+    padding: 8px;
+    display: inline-block;
+    background-color: $markColor;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: -8px;
+    top: -12px;
+    box-shadow: $afterShadow;
+    border-radius: 4px;
+}
+.product:hover {
+    box-shadow: $bigShadowHover;
+    @include transition(box-shadow);
+}
+.productImg {
+    width: 100%;
+}
+.text {
+    padding: 16px;
+}
+h2 {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.aboutProduct {
+    margin-top: 16px;
+    font-size: 16px;
+}
+.price {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+}
+@media(max-width: 1447px) {
+    .product {
+        max-width: unset;
+        width: 48%;
+    }
+}
+@media(max-width: 940px) {
+    .product {
+        width: 100%;
+        margin-right: unset;
+    }
+    .sort {
+        margin-right: unset;
+    }
+}
+@media(max-width: 763px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .addProduct {
+        align-items: center;
+        max-width: 520px;
+        width: 100%;
+    }
+    .leftBar {
+        margin-right: unset;
+        max-width: 520px;
+        width: 100%;
+    }
+    .value, .valueTA {
+        max-width: unset;
+    }
+    .btnAddOff {
+        margin: 24px auto 0;
+    }
+    .products {
+        margin-top: 24px;
+    }
+    .productList {
+        max-width: 520px;
+    }
+}

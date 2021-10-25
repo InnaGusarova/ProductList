@@ -1,0 +1,102 @@
+<!-- src/template.html -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <main>
+        <div class="addProduct">
+            <h1>Добавление товара</h1>
+            <aside class="leftBar">
+                <p class="description mark">Наименование товара</p>
+                <input
+                    type="text" 
+                    class="value" 
+                    placeholder="Введите наименование товара"
+                >
+                <p class="description">Описание товара</p>
+                <textarea 
+                    class="valueTA" 
+                    placeholder="Введите описание товара" 
+                    rows="6"
+                ></textarea>
+                <p class="description mark">Ссылка на изображение товара</p>
+                <input 
+                    type="text" 
+                    class="value" 
+                    placeholder="Введите ссылку"
+                >
+                <p class="description mark">Цена товара</p>
+                <input 
+                    type="text"
+                    class="value" 
+                    placeholder="Введите цену товара"
+                >
+                <button class="btnAddOff">Добавить товар</button>
+            </aside>
+        </div>
+        <section class="products">
+            <div class="sort">
+                <p>По умолчанию</p> 
+                <img class="arrow" src="../img/arrow.png">
+             </div>
+            <div class="productList">
+                <div class="product">
+                    <img class="productImg" src="../img/rectangle.png" alt="productPhoto">
+                    <div class="text">
+                        <h2>Наименование товара</h2>
+                        <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                        <p class="price">10 000 руб.</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="productImg" src="../img/rectangle.png" alt="productPhoto">
+                    <div class="text">
+                        <h2>Наименование товара</h2>
+                        <p class="aboutProduct">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                        <p class="price">10 000 руб.</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="productImg" src="../img/rectangle.png" alt="productPhoto">
+                    <div class="text"> 
+                        <h2>Наименование товара</h2>
+                        <p class="aboutProduct">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                        <p class="price">10 000 руб.</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="productImg" src="../img/rectangle.png" alt="productPhoto">
+                    <div class="text">
+                        <h2>Наименование товара</h2>
+                        <p class="aboutProduct">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                        <p class="price">10 000 руб.</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="productImg" src="../img/rectangle.png" alt="productPhoto">
+                    <div class="text">
+                        <h2>Наименование товара</h2>
+                        <p class="aboutProduct">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                        <p class="price">10 000 руб.</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="productImg" src="../img/rectangle.png" alt="productPhoto">
+                    <div class="text">
+                        <h2>Наименование товара</h2>
+                        <p class="aboutProduct">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                        <p class="price">10 000 руб.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
