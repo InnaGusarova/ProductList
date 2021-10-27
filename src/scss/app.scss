@@ -54,7 +54,7 @@ h1 {
 }
 .description {
     margin: 16px 0 0 0;
-    font-size: 10px;
+    font-size: 14px;
     color: $inputName;
 }
 .mark::after {
@@ -93,7 +93,8 @@ h1 {
 .btn {
     display: block;
     margin-top: 24px;
-    width: 284px;
+    max-width: 284px;
+    width: 100%;
     height: 36px;
     border: none;
     border-radius: 10px;
@@ -104,9 +105,9 @@ h1 {
     outline: none;
 }
 .btnAddOff {
-    background-color: $btnOff !important;
-    color: $titleDescription !important;
-    cursor: unset !important;
+    background-color: $btnOff;
+    color: $titleDescription;
+    cursor: unset;
 }
 .btnAdd {
     background-color: $btnOnBack;
@@ -147,7 +148,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     max-width: 1028px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .product {
     margin-right: 10px;
@@ -182,9 +183,11 @@ h1 {
     display: block;
 }
 .productImg {
-    width: 100%;
     height: 100%;
     max-height: 200px;
+    max-width: 332px;
+    margin: 0 auto;
+    display: block;
 }
 .text {
     box-sizing: border-box;
@@ -217,7 +220,7 @@ h2 {
         width: 48%;
     }
 }
-@media(max-width: 940px) {
+@media(max-width: 1105px) {
     .product {
         width: 100%;
         margin-right: unset;
@@ -228,8 +231,6 @@ h2 {
     .productImg {
         width: auto;
         height: 200px;
-        margin: 0 auto;
-        display: block;
     }
 }
 @media(max-width: 763px) {
@@ -281,10 +282,10 @@ h2 {
     }
 }
 #nameError {
-    top: 85px;
+    top: 89px;
 }
 #urlError {
-    bottom: 128px;
+    bottom: 133px;
 }
 #priceError {
     bottom: 58px;

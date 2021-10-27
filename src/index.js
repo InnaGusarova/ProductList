@@ -8,7 +8,7 @@ const deleteProd = document.querySelectorAll('.deleteProd');
 const regUrl = /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/;
 const regPrice = /(?<![-.])\b[0-9]+\b(?!\.[0-9])/;
 
-const btnAdd = document.querySelector('.btnAdd');
+const btnAdd = document.querySelector('.btn');
 const sortVars = document.querySelector('.sortVars');
 const sort = document.querySelector('.sort');
 const productList = document.querySelector('.productList');
@@ -46,6 +46,7 @@ const checkAll = () => {
     btnAdd.classList.add('btnAddOff');
   } else {
     btnAdd.classList.remove('btnAddOff');
+    btnAdd.classList.add('btnAdd');
   }
 }
 
